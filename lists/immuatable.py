@@ -1,3 +1,4 @@
+print("Set a variable called result to boolean True")
 result = True
 another_result = result
 print("Lets start by printing the ids of result and another_result")
