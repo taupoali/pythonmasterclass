@@ -5,7 +5,6 @@ print("Lets start by printing the ids of result and another_result")
 print(id(result))
 print(id(another_result))
 
-
 # the id function returns the identity of an object
 
 # in the statement below, we are creating a new OBJECT with a new id
