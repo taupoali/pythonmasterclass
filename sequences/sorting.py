@@ -1,4 +1,4 @@
-pangram = "The quick brown fox jumps over the lazy dog"
+pangram: str = "The quick brown fox jumps over the lazy dog"
 print(id(pangram))
 
 # Here we are using the built-in sorted function
@@ -10,7 +10,7 @@ print(id(letters))
 
 
 # Make sure you are cautious with variable names
-# Dont use names of builtin functions as vars! Crazy that Python lets you do this...
+# Don't use names of builtin functions as vars! Crazy that Python lets you do this...
 
 numbers = [2.3, 4.5, 8.7, 9.2, 1.6]
 print(numbers)

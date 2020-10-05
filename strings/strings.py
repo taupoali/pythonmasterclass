@@ -10,3 +10,4 @@ age = "ALi"
 print(age)
 print(type(age))
 
+

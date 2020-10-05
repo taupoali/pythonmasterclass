@@ -2,7 +2,7 @@ print("Lets think about how we create **new** lists\n")
 empty_list = []
 even = [2, 4, 6, 8]
 odd = [1, 3, 5, 7, 9]
-print("here is the even list: {} with id of {}".format(even,id(even)))
+print("here is the even list: {} with id of {}".format(even, id(even)))
 print("here is the odd list {} with id of {}".format(odd, id(odd)))
 
 print("\nNow lets create a new list with numbers = even + odd")
@@ -34,7 +34,7 @@ print(numbers == more_numbers)
 print("This is because the == operation is checking the values of the items")
 
 
-# we coulod also use slices to create new lists, just as we did with strings
+# we could also use slices to create new lists, just as we did with strings
 
 more_numbers2 = numbers.copy()
 print(more_numbers2)
