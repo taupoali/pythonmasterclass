@@ -1,10 +1,10 @@
 import mysql.connector as mysql
 
 db = mysql.connect(
-    host = "localhost",
-    user = "root",
-    password = "password1",
-    database = "classicmodels"
+    host="localhost",
+    user="root",
+    password="password1",
+    database="classicmodels"
 )
 
 # you have to create a cursor
