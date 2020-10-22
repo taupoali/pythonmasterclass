@@ -1,13 +1,13 @@
-# import timeit
+import timeit
 
 # The longer code as we saw in outliers has 2 loops and looks more complicated - more lines of code
 # But it uses slicing to delete in batch - which is only possible as this particular list is already SORTED
 # With the go backwards methods, when we delete, its a single item and we shuffle down on the indexing
 # With large lists, this is significantly slower! 0.6s vs 9s
 
-max_value = 100
+max_value = 100000000
 min_valid = 10
-max_valid = 97
+max_valid = 97000000
 
 data_list1 = list(range(max_value))
 data_list2 = list(range(max_value))
@@ -23,31 +23,38 @@ def sanitise_1(data):
     del data[:stop]
 
     start = 0
-    for index in range(len(data) -1, -1, -1):
+    for index in range(len(data) - 1, -1, -1):
         if data[index] <= max_valid:
             start = index + 1
             break
     del data[start:]
 
 
-
-
-
-
-
-
-
 def sanitise_2(data):
-    stop = 0
+    top_index = len(data) - 1
+    for index, value in enumerate(reversed(data)):
+        if value < min_valid or value > max_valid:
+            del data[top_index - index]
 
 
 def sanitise_3(data):
-    stop = 0
+    for index in range(len(data) - 1, -1, -1):
+        if data[index] < min_valid or data[index] > max_valid:
+            del data[index]
 
 
-sanitise_1(data_list1)
-print(data_list1)
-sanitise_2(data_list2)
-print(data_list2)
-sanitise_3(data_list3)
-print(data_list3)
+if __name__ == "__main__":
+    print("Timing")
+    x = timeit.timeit("sanitise_1(data_list1)", setup="from __main__ import sanitise_1," "data_list1", number=1)
+    print("{:15.15f}".format(x))
+    y = timeit.timeit("sanitise_2(data_list2)", setup="from __main__ import sanitise_2," "data_list2", number=1)
+    print("{:15.15f}".format(y))
+    # z = timeit.timeit("sanitise_3(data_list3)", setup="from __main__ import sanitise_3," "data_list3", number=1)
+    # print("{:15.15f}".format(z))
+
+# sanitise_1(data_list1)
+#print(data_list1)
+#sanitise_2(data_list2)
+#print(data_list2)
+#sanitise_3(data_list3)
+#print(data_list3)
