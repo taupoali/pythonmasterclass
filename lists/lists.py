@@ -6,3 +6,4 @@ list2 = list1
 print(list2)
 list2.append(6)
 print(list1)
+print(list2)

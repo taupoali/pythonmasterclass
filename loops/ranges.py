@@ -1,7 +1,9 @@
+# In this range, we start at 1 (not zero) and up to but not including 20
 for i in range(1,20):
     print("i is now {}".format(i))
 
 # Now if we exclude starting value, it defaults to zero
+# So here, its zero up to but not including 10
 for i in range(10):
     print(i)
 
