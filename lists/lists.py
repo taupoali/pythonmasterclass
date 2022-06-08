@@ -6,3 +6,8 @@ list2 = list1
 print(list2)
 list2.append(6)
 print(list1)
+
+
+# Notice to append an item to the list we used append method of the object
+# There was no assignment, e.g. list2 = list2.append(6)
+# There is no return value from the append method, so list2 would be empty []

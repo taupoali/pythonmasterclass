@@ -5,12 +5,16 @@
 # THE LIST OBJECT IS MUTABLE
 
 shopping_list = ["Bread", "Milk", "Cheese"]
-
+print(shopping_list)
 another_list = shopping_list
+print(another_list)
 
+print("\nFirst we show the id of shopping_list")
 print(id(shopping_list))
+print("Now we show the id of another_list which was set to equal shopping_list")
 print(id(another_list))
 
+print("\n\nNow append method to the list so biscuits is added")
 shopping_list.append("Biscuits")
 
 print(id(shopping_list))

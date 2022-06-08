@@ -1,3 +1,9 @@
+# Immutable data types in Python are
+# Numbers (Integer, Rational, Float, Decimal, Complex & Booleans)
+# Strings
+# Tuples
+# In this code we use numbers (boolean) and strings
+
 print("Set a variable called result to boolean True")
 result = True
 another_result = result
