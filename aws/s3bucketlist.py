@@ -1,6 +1,6 @@
 import boto3
 
-client = boto3.client('s3', aws_access_key_id='AKIAXB527MZ3QCH7PZ6H', aws_secret_access_key='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')
+client = boto3.client('s3', aws_access_key_id='', aws_secret_access_key='')
 response = client.list_buckets()
 print(type(response))
 
@@ -13,7 +13,7 @@ print(type(response))
 # We get a collection provides an iterable interface to a group of resources.
 # Read https://boto3.amazonaws.com/v1/documentation/api/latest/guide/collections.html
 
-s3 = boto3.resource('s3', aws_access_key_id='AKIAXB527MZ3QCH7PZ6H', aws_secret_access_key='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')
+s3 = boto3.resource('s3', aws_access_key_id='', aws_secret_access_key='')
 for bucket in s3.buckets.all():
     print(bucket.name)
 
