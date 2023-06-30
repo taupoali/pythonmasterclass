@@ -1,11 +1,10 @@
-
 # the def keyword is used to define a function
 # here we know the number of arguments
 def sumnums(a, b):
-    return a+b
+    return a + b
 
 
-print(sumnums(4,3))
+print(sumnums(4, 3))
 
 # lets define 2 lists
 mylist1 = [2, 6, 10]
@@ -26,5 +25,5 @@ mytuple1 = mytuple1 + mytuple2
 print(mytuple1)
 print(id(mytuple1))
 
-x = lambda a : a + 10
+x = lambda a: a + 10
 print(x(5))
