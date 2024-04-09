@@ -53,3 +53,15 @@ print(metallica[1])
 metallica2 = list(metallica)
 print(metallica2)
 print(type(metallica2))
+
+print("*************************************")
+title, artist, year = metallica
+print(title)
+print(artist)
+print(year)
+
+table = ("Coffee Table", 200, 100, 75, 34.5)
+print(table[1] * table[2])
+
+name, length, width, height, price = table
+print(length*width)
